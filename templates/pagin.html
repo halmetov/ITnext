@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% for d in ddd %}
+    <h1>{{ d.title }}</h1>
+    <img width="500px" height="300px" src="/media/{{ d.logo }}" alt="">
+    {% endfor %}
+
+
+    <ul style="display:flex; font-size:40px; list-style-type:none;">
+        {% if pred > 0 %}
+        <li style="margin:30px;"><a href="/pagin/?page={{ pred }}">  <  </a></li>
+        {% endif %}
+
+        <li style="margin:30px;"><a href="/pagin/?page={{ hazrgi }}"> {{hazrgi}}  </a></li>
+
+        {% if sled > 0 %}
+        <li style="margin:30px;"><a href="/pagin/?page={{ sled }}">  >  </a></li>
+        {% endif %}
+    </ul>
+
+</body>
+</html>
